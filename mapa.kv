@@ -1,0 +1,32 @@
+<MapaRoot>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    TextInput:
+        id: lat_input
+        hint_text: 'Latitude (ex: -23.5505)'
+        multiline: False
+        size_hint_y: None
+        height: '40dp'
+        input_filter: 'float'
+
+    TextInput:
+        id: lon_input
+        hint_text: 'Longitude (ex: -46.6333)'
+        multiline: False
+        size_hint_y: None
+        height: '40dp'
+        input_filter: 'float'
+
+    Button:
+        text: 'Mostrar Local'
+        size_hint_y: None
+        height: '40dp'
+        on_press: app.mostrar_local()
+
+    MapView:
+        id: mapview
+        zoom: 10
+        lat: -23.5505
+        lon: -46.6333
