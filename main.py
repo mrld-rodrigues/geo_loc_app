@@ -6,7 +6,7 @@ class MapaRoot(BoxLayout):
     pass
 
 class MapaApp(App):
-    def build(self):        
+    def build(self):         
         return MapaRoot()
 
     def mostrar_local(self):
