@@ -1,32 +1,42 @@
+#:import dp kivy.metrics.dp
+#:import rgba kivy.utils.get_color_from_hex
+
 <MapaRoot>:
-    orientation: 'vertical'
-    padding: 10
-    spacing: 10
+    FloatLayout:
 
-    TextInput:
-        id: lat_input
-        hint_text: 'Latitude (ex: -23.5505)'
-        multiline: False
-        size_hint_y: None
-        height: '40dp'
-        input_filter: 'float'
+        MapView:
+            id: mapview
+            lat: -23.5505
+            lon: -46.6333
+            zoom: 15
+            size_hint: 1, 1
+            pos_hint: {"x": 0, "y": 0}
 
-    TextInput:
-        id: lon_input
-        hint_text: 'Longitude (ex: -46.6333)'
-        multiline: False
-        size_hint_y: None
-        height: '40dp'
-        input_filter: 'float'
-
-    Button:
-        text: 'Mostrar Local'
-        size_hint_y: None
-        height: '40dp'
-        on_press: app.mostrar_local()
-
-    MapView:
-        id: mapview
-        zoom: 10
-        lat: -23.5505
-        lon: -46.6333
+        # Botão flutuante estilizado
+        Button:
+            text: "⛔ Encerrar"
+            size_hint: None, None
+            size: dp(140), dp(55)
+            pos_hint: {"right": 0.97, "y": 0.02}
+            background_normal: ""
+            background_color: rgba("#D9534F")  # Vermelho suave
+            color: rgba("#FFFFFF")  # Texto branco
+            font_size: "16sp"
+            bold: True
+            border: (16, 16, 16, 16)
+            canvas.before:
+                Color:
+                    rgba: rgba("#00000066")  # Sombra leve
+                RoundedRectangle:
+                    pos: self.x + dp(2), self.y - dp(2)
+                    size: self.size
+                    radius: [20]
+            canvas.after:
+                Color:
+                    rgba: self.background_color
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [20]
+            on_release:
+                app.encerrar_app()
