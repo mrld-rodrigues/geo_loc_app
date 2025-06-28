@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geo_Loc_App</string>
+    <string name="private_version">ffb8e722a95fdc64eff9588d82878885dbf3e9cc</string>
+    <string name="presplash_color">#000000</string>
+    <string name="urlScheme">kivy</string>
+</resources>

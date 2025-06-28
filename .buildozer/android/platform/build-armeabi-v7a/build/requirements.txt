@@ -1,0 +1,7 @@
+certifi
+chardet
+idna
+kivy_garden.mapview
+plyer
+requests
+urllib3
