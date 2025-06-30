@@ -1,2 +1,0 @@
-/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-armeabi-v7a/build/bootstrap_builds/sdl2/obj/local/armeabi-v7a/objs-debug/SDL2_mixer/src/codecs/music_mpg123.o: \
-  /home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-armeabi-v7a/build/bootstrap_builds/sdl2/jni/SDL2_mixer/src/codecs/music_mpg123.c

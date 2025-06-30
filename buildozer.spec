@@ -1,13 +1,12 @@
 [app]
 
 # (str) Title of your application
-title = Geo_Loc_App
-
+title = GeoLocApp           
 # (str) Package name
-package.name = geolocapp
+package.name = geoloc
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.geolocapp
+package.domain = org.geoloc
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -95,16 +94,16 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-# buildozer.spec
+android.permissions = android.permission.INTERNET,ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION,INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
 
-android.permissions = ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, INTERNET
+android.useandroidx = True
 
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-android.api = 31
+android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
 android.minapi = 21
@@ -203,8 +202,10 @@ android.ndk = 25b
 # android.add_resources = legal_resources
 #android.add_resources =
 
+garden_requirements = mapview
+
 # (list) Gradle dependencies to add
-#android.gradle_dependencies =
+android.gradle_dependencies = com.google.android.gms:play-services-location:21.0.1
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -286,14 +287,14 @@ android.ndk = 25b
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-android.archs = armeabi-v7a
+android.archs = arm64-v8a, armeabi-v7a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
 # android.numeric_version = 1
 
 # (bool) enables Android auto backup feature (Android API >=23)
-android.allow_backup = False
+android.allow_backup = True
 
 # (str) XML file for custom backup rules (see official auto backup documentation)
 # android.backup_rules =

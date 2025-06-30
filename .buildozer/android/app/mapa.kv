@@ -10,11 +10,29 @@
             size_hint: 1, 1
             pos_hint: {"x": 0, "y": 0}
 
+        Label:
+            id: coordenadas
+            size_hint: None, None
+            size: dp(250), dp(40)
+            pos_hint: {"top": 0.98, "right": 0.98}
+            text: "Localização: ---"
+            color: 1, 1, 1, 1
+            font_size: "16sp"
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.5
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [10, 10, 10, 10]
+
+
         Button:
             text: "X"
             size_hint: None, None
             size: dp(64), dp(64)
-            pos_hint: {"center_x": 0.5, "y": 0.02}  # Centralizado na horizontal, próximo à base
+            center_x: root.width / 2
+            pos_hint: {"y": 0.02}
             background_normal: ""
             background_color: 0.83, 0.33, 0.31, 1
             color: 0, 0, 0, 1
