@@ -1,75 +1,55 @@
 from kivy.app import App
+from kivy.clock import Clock
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-
-from jnius import autoclass, cast, PythonJavaClass, java_method
-
-from kivy_garden.mapview import MapView
-
-# Java classes
-Context = autoclass('android.content.Context')
-PythonActivity = autoclass('org.kivy.android.PythonActivity')
-LocationManager = autoclass('android.location.LocationManager')
+from kivy_garden.mapview import MapView, MapMarker
+from plyer import gps
 
 
-# Listener para localização
-class MyLocationListener(PythonJavaClass):
-    __javainterfaces__ = ['android/location/LocationListener']
-    __javacontext__ = 'app'
-
-    def __init__(self, callback):
-        super().__init__()
-        self.callback = callback
-
-    @java_method('(Landroid/location/Location;)V')
-    def onLocationChanged(self, location):
-        latitude = location.getLatitude()
-        longitude = location.getLongitude()
-        self.callback(latitude, longitude)
-
-    @java_method('(Ljava/lang/String;)V')
-    def onProviderDisabled(self, provider):
-        pass
-
-    @java_method('(Ljava/lang/String;)V')
-    def onProviderEnabled(self, provider):
-        pass
-
-    @java_method('(Ljava/lang/String;ILandroid/os/Bundle;)V')
-    def onStatusChanged(self, provider, status, extras):
-        pass
+class MapaRoot(BoxLayout):
+    pass
 
 
-class GeoApp(App):
+class MapaApp(App):
     def build(self):
-        self.layout = BoxLayout(orientation='vertical')
-
-        self.mapview = MapView(zoom=15, lat=0, lon=0)
-        self.label = Label(text="Localização não iniciada", size_hint_y=0.1)
-
-        self.layout.add_widget(self.mapview)
-        self.layout.add_widget(self.label)
-
-        return self.layout
+        return MapaRoot()
 
     def on_start(self):
-        self.iniciar_gps()
+        try:
+            gps.configure(
+                on_location=self.atualizar_localizacao,
+                on_status=self.on_gps_status
+            )
+            # Inicia o GPS após 1 segundo (para garantir que o app está carregado)
+            Clock.schedule_once(lambda dt: gps.start(minTime=1000, minDistance=0), 1)
+        except NotImplementedError:
+            print("GPS não suportado neste dispositivo.")
 
-    def mostrar_localizacao(self, lat, lon):
-        self.label.text = f"Latitude: {lat:.6f}\nLongitude: {lon:.6f}"
-        self.mapview.center_on(lat, lon)
+    def atualizar_localizacao(self, **kwargs):
+        lat = float(kwargs.get('lat', 0))
+        lon = float(kwargs.get('lon', 0))
+        print(f"Localização recebida: {lat}, {lon}")
 
-    def iniciar_gps(self):
-        activity = PythonActivity.mActivity
-        self.location_manager = cast(LocationManager, activity.getSystemService(Context.LOCATION_SERVICE))
-        self.listener = MyLocationListener(self.mostrar_localizacao)
+        mapview = self.root.ids.mapview
 
-        def start_location_updates():
-            provider = self.location_manager.GPS_PROVIDER
-            self.location_manager.requestLocationUpdates(provider, 1000, 1, self.listener)
+        # Atualiza texto da localização se o Label existir
+        if "coordenadas" in self.root.ids:
+            self.root.ids.coordenadas.text = f"Localização: {lat:.5f}, {lon:.5f}"
 
-        activity.runOnUiThread(start_location_updates)
+        # Limpa os marcadores antigos e adiciona novo
+        mapview.clear_widgets()
+        marker = MapMarker(lat=lat, lon=lon)
+        mapview.add_marker(marker)
+
+        # Centraliza no marcador
+        mapview.center_on(lat, lon)
+
+    def on_gps_status(self, stype, status):
+        print(f"GPS status: {stype} - {status}")
+
+    def encerrar_app(self):
+        print("Encerrando aplicativo...")
+        self.stop()
 
 
-if __name__ == "__main__":
-    GeoApp().run()
+if __name__ == '__main__':
+    MapaApp().run()

@@ -4581,7 +4581,7 @@ conftest.c: In function 'main':
 conftest.c:91:8: warning: implicit declaration of function 'makedev' [-Wimplicit-function-declaration]
    91 | return makedev(0, 0);
       |        ^~~~~~~
-/usr/bin/ld: /tmp/ccq7CwFB.o: in function `main':
+/usr/bin/ld: /tmp/cc4HFslU.o: in function `main':
 conftest.c:(.text+0x14): undefined reference to `makedev'
 collect2: error: ld returned 1 exit status
 configure:9391: $? = 1
@@ -6930,7 +6930,7 @@ configure:11959: checking for --with-tzpath
 configure:11979: result: "/usr/share/zoneinfo:/usr/lib/zoneinfo:/usr/share/lib/zoneinfo:/etc/zoneinfo"
 configure:11986: checking for t_open in -lnsl
 configure:12011: gcc -o conftest    conftest.c -lnsl  -ldl  >&5
-/usr/bin/ld: /tmp/cckvUGBK.o: in function `main':
+/usr/bin/ld: /tmp/ccDq006D.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `t_open'
 collect2: error: ld returned 1 exit status
 configure:12011: $? = 1
@@ -9348,7 +9348,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for explicit_memset
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccmSj9nI.o: in function `main':
+/usr/bin/ld: /tmp/cctTjLqZ.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `explicit_memset'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -9587,7 +9587,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for fdwalk
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccebXGEt.o: in function `main':
+/usr/bin/ld: /tmp/ccXEhleG.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `fdwalk'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -9819,7 +9819,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for fork1
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/cclyPhFU.o: in function `main':
+/usr/bin/ld: /tmp/ccd7kaL9.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `fork1'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -10146,7 +10146,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for _getpty
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccgRmwLn.o: in function `main':
+/usr/bin/ld: /tmp/cchkS4EP.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `_getpty'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -10439,7 +10439,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for getwd
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccO1NPHs.o: in function `main':
+/usr/bin/ld: /tmp/ccXVaEjG.o: in function `main':
 conftest.c:(.text+0xa): warning: the `getwd' function is dangerous and should not be used.
 configure:15227: $? = 0
 configure:15227: result: yes
@@ -10553,7 +10553,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for plock
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccSOnM3k.o: in function `main':
+/usr/bin/ld: /tmp/cc9Lg0B5.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `plock'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -10877,7 +10877,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for pthread_init
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccVSrZbP.o: in function `main':
+/usr/bin/ld: /tmp/cc8Q3oHq.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `pthread_init'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -11210,7 +11210,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for rtpSpawn
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccdZGhqc.o: in function `main':
+/usr/bin/ld: /tmp/ccg0Z8Jz.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `rtpSpawn'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -11688,7 +11688,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for strlcpy
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccFgENLF.o: in function `main':
+/usr/bin/ld: /tmp/ccMDpNPJ.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `strlcpy'
 collect2: error: ld returned 1 exit status
 configure:15227: $? = 1
@@ -12062,7 +12062,7 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for tempnam
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccmvpQ4L.o: in function `main':
+/usr/bin/ld: /tmp/ccIwhm8Y.o: in function `main':
 conftest.c:(.text+0xa): warning: the use of `tempnam' is dangerous, better use `mkstemp'
 configure:15227: $? = 0
 configure:15227: result: yes
@@ -12080,13 +12080,13 @@ configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for tmpnam
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/cc8djBA9.o: in function `main':
+/usr/bin/ld: /tmp/ccAvGcpA.o: in function `main':
 conftest.c:(.text+0xa): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
 configure:15227: $? = 0
 configure:15227: result: yes
 configure:15227: checking for tmpnam_r
 configure:15227: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccaIq9Sp.o: in function `main':
+/usr/bin/ld: /tmp/ccPPt4pG.o: in function `main':
 conftest.c:(.text+0xa): warning: the use of `tmpnam_r' is dangerous, better use `mkstemp'
 configure:15227: $? = 0
 configure:15227: result: yes
@@ -13319,7 +13319,7 @@ conftest.c: In function 'main':
 conftest.c:351:6: warning: implicit declaration of function 'chflags' [-Wimplicit-function-declaration]
   351 |   if(chflags(argv[0], 0) != 0)
       |      ^~~~~~~
-/usr/bin/ld: /tmp/cceZBWgw.o: in function `main':
+/usr/bin/ld: /tmp/ccJgZyor.o: in function `main':
 conftest.c:(.text+0x24): warning: chflags is not implemented and will always fail
 configure:16110: $? = 0
 configure:16110: ./conftest
@@ -13688,7 +13688,7 @@ conftest.c: In function 'main':
 conftest.c:351:6: warning: implicit declaration of function 'lchflags' [-Wimplicit-function-declaration]
   351 |   if(lchflags(argv[0], 0) != 0)
       |      ^~~~~~~~
-/usr/bin/ld: /tmp/ccHviRdE.o: in function `main':
+/usr/bin/ld: /tmp/ccRwqIGE.o: in function `main':
 conftest.c:(.text+0x24): undefined reference to `lchflags'
 collect2: error: ld returned 1 exit status
 configure:16159: $? = 1
@@ -14916,7 +14916,7 @@ configure:17968: $? = 0
 configure:17968: result: yes
 configure:18068: checking for fseek64
 configure:18068: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccHwsmYs.o: in function `main':
+/usr/bin/ld: /tmp/ccKdHIa5.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `fseek64'
 collect2: error: ld returned 1 exit status
 configure:18068: $? = 1
@@ -15339,7 +15339,7 @@ configure:18068: $? = 0
 configure:18068: result: yes
 configure:18068: checking for ftell64
 configure:18068: gcc -o conftest    conftest.c -ldl  >&5
-/usr/bin/ld: /tmp/ccQENumh.o: in function `main':
+/usr/bin/ld: /tmp/cc69COjj.o: in function `main':
 conftest.c:(.text+0xa): undefined reference to `ftell64'
 collect2: error: ld returned 1 exit status
 configure:18068: $? = 1

@@ -932,7 +932,7 @@ configure:18637: checking for memfd_create
 configure:18637: /usr/bin/ccache /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target armv7a-linux-androideabi21 -fomit-frame-pointer -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -fPIC -o conftest -target armv7a-linux-androideabi21 -fomit-frame-pointer -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -fPIC -Wall -fexceptions -DANDROID -I/home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -I/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/python-installs/geoloc/armeabi-v7a/include/python3.1   -L/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/libs_collections/geoloc/armeabi-v7a conftest.c  >&5
 ld: error: undefined symbol: memfd_create
 >>> referenced by conftest.c
->>>               /tmp/conftest-028161.o:(main)
+>>>               /tmp/conftest-d86658.o:(main)
 clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18637: $? = 1
 configure: failed program was:
@@ -1003,7 +1003,7 @@ configure:18658: checking for mkostemp
 configure:18658: /usr/bin/ccache /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target armv7a-linux-androideabi21 -fomit-frame-pointer -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -fPIC -o conftest -target armv7a-linux-androideabi21 -fomit-frame-pointer -march=armv7-a -mfloat-abi=softfp -mfpu=vfp -mthumb -fPIC -Wall -fexceptions -DANDROID -I/home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -I/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/python-installs/geoloc/armeabi-v7a/include/python3.1   -L/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/libs_collections/geoloc/armeabi-v7a conftest.c  >&5
 ld: error: undefined symbol: mkostemp
 >>> referenced by conftest.c
->>>               /tmp/conftest-6d327e.o:(main)
+>>>               /tmp/conftest-304a0d.o:(main)
 >>> did you mean: mkstemp
 >>> defined in: /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/lib/arm-linux-androideabi/21/libc.so
 clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
