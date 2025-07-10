@@ -1,6 +1,6 @@
 #:import dp kivy.metrics.dp
 
-<MapaRoot>:
+<MainRoot>:
     FloatLayout:
         MapView:
             id: mapview
@@ -11,7 +11,7 @@
             pos_hint: {"x": 0, "y": 0}
 
         Label:
-            id: coordenadas
+            id: coordinates
             size_hint: None, None
             size: dp(250), dp(40)
             pos_hint: {"top": 0.98, "right": 0.98}
@@ -54,4 +54,4 @@
                     radius: [dp(32), dp(32), dp(32), dp(32)]
 
             on_release:
-                app.encerrar_app()
+                app.exit_app()

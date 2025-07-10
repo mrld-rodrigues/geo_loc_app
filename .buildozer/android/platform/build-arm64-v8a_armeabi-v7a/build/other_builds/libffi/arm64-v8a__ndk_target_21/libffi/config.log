@@ -31,9 +31,9 @@ PATH: /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/ll
 PATH: /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/
 PATH: /home/mrldrodor/.buildozer/android/platform/android-sdk/tools/
 PATH: /home/mrldrodor/.buildozer/android/platform/apache-ant-1.9.4/bin/
-PATH: /home/mrldrodor/.vscode/extensions/ms-python.python-2025.8.0-linux-x64/python_files/deactivate/bash/
+PATH: /home/mrldrodor/.vscode/extensions/ms-python.python-2025.8.1-linux-x64/python_files/deactivate/bash/
 PATH: /home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/venv/bin/
-PATH: /home/mrldrodor/.vscode/extensions/ms-python.python-2025.8.0-linux-x64/python_files/deactivate/bash/
+PATH: /home/mrldrodor/.vscode/extensions/ms-python.python-2025.8.1-linux-x64/python_files/deactivate/bash/
 PATH: /home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/venv/bin/
 PATH: /usr/local/bin/
 PATH: /usr/bin/
@@ -997,7 +997,7 @@ configure:18637: checking for memfd_create
 configure:18637: /usr/bin/ccache /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target aarch64-linux-android21 -fomit-frame-pointer -march=armv8-a -fPIC -o conftest -target aarch64-linux-android21 -fomit-frame-pointer -march=armv8-a -fPIC -Wall -fexceptions -DANDROID -I/home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -I/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/python-installs/geoloc/arm64-v8a/include/python3.1   -L/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/libs_collections/geoloc/arm64-v8a conftest.c  >&5
 ld: error: undefined symbol: memfd_create
 >>> referenced by conftest.c
->>>               /tmp/conftest-0c34f9.o:(main)
+>>>               /tmp/conftest-1ac133.o:(main)
 clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
 configure:18637: $? = 1
 configure: failed program was:
@@ -1068,7 +1068,7 @@ configure:18658: checking for mkostemp
 configure:18658: /usr/bin/ccache /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target aarch64-linux-android21 -fomit-frame-pointer -march=armv8-a -fPIC -o conftest -target aarch64-linux-android21 -fomit-frame-pointer -march=armv8-a -fPIC -Wall -fexceptions -DANDROID -I/home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include -I/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/python-installs/geoloc/arm64-v8a/include/python3.1   -L/home/mrldrodor/Documentos/mrld_projetos/app_geo_loc/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/libs_collections/geoloc/arm64-v8a conftest.c  >&5
 ld: error: undefined symbol: mkostemp
 >>> referenced by conftest.c
->>>               /tmp/conftest-dfb4f8.o:(main)
+>>>               /tmp/conftest-dbe1d1.o:(main)
 >>> did you mean: mkstemp
 >>> defined in: /home/mrldrodor/.buildozer/android/platform/android-ndk-r25b/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android/21/libc.so
 clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
